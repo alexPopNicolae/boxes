@@ -1,0 +1,247 @@
+
+#app {
+    width: 80%;
+    margin: 0 auto;
+}
+.header {
+    height: 100px;
+    line-height: 100px;
+}
+.tabel {
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 3px;
+}
+.tabel_header {
+    display: flex;
+    background: black;
+    color: white;
+    height: 30px;
+    line-height: 27px;
+    padding: 3px;
+}
+.tabel_header > div {
+    border-right: 1px solid white;
+    padding-left: 5px;
+}
+.tabel_header > div:nth-of-type(1) {
+    width: 50%;
+}
+.tabel_header > div:nth-of-type(2) {
+    width: 10%;
+}
+.tabel_header > div:nth-of-type(3) {
+    width: 20%;
+}
+.tabel_header > div:nth-of-type(4) {
+    width: 20%;
+    border-right: none;
+}
+.course_row {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    padding: 3px;
+
+}
+.course_row > div {
+    border-right: 1px solid lightgrey;
+    padding-left: 5px; 
+}
+.course_row > div:nth-of-type(1) {
+    width: 50%;
+}
+.course_row > div:nth-of-type(2) {
+    width:10%;
+}
+.course_row > div:nth-of-type(3) {
+    width: 20%;
+}
+.course_row > div:nth-of-type(4) {
+    width: 20%;
+}
+
+.course_row:last-child {
+    border-bottom: none;
+}
+
+.courses_page .btn {
+    margin-bottom: 20px;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.container .row {
+    display: flex;
+}
+
+.expandable_article {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #263238;
+    background: #ECEFF1;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.expandable_article:hover {
+    box-shadow: 0px 0px 20px #263238;
+}
+
+.expandable_article h1 {
+    font-size: 20px;
+    color: #E91E63;
+    cursor: pointer;
+}
+.expandable_article h1:hover {
+    color: #D81B60;
+}
+.close_button {
+    width: 20px;
+    height: 20px;
+   text-align: center;
+   line-height: 20px;
+}
+
+.full_article {
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+    background: white;
+    border-radius: 3px;
+    animation: fadein 1s ease-in-out;
+    overflow: hidden;
+}
+
+@keyframes fadein {
+    0% {
+        right: 900px;
+        bottom: 300px;
+    }
+    100% {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/********************************************************/
+/**CSS PENTRU CATALIN**/
+
+/**
+css for the expandable boxes
+*/
+.boxes_container {
+ width: 80%;
+ margin: 30px auto;   
+}
+.expandable-boxes {
+  position: relative;
+}
+
+.expandable-box {
+  width: 30%;
+  height: 130px;
+  float: left;
+  cursor: pointer;
+  margin: 0 3% 20px 0;
+  border: 1px solid #999;
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.expandable-box h1 {
+    font-size: 20px;
+    color: red;
+    pointer-events: none;
+}
+
+.expandable-box p {
+    pointer-events: none;
+}
+
+.inner_component {
+    width:80%;
+    height: 100px;
+    background: grey;
+    border-radius: 2px;
+    color: white;
+    margin: 0px auto;
+}
+
+.expandable-box.open {
+    width: 96%;
+    height: 300px;
+    margin: 0;
+}
+.animate {
+    opacity: 0;
+}
+
+.expandable-box.open .animate {
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.expandable-box.out {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+/**end for css expandable boxes**/
+/******END CSS PENTRU CATA */
+/***************************/
+
+
+
+/**style for GrowingBox component**/
+.component_item {
+    border: 1px solid black;
+    position: relative;
+}
+.growing_box {
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.growing_box.opened {
+    position: static;
+}
+
+.inner_container {
+    border: 1px solid pink;
+    background: pink;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+}
